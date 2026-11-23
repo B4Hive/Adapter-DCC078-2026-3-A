@@ -1,0 +1,14 @@
+@startuml classDiagram
+title Adapter
+' majoritariamente conversões e blablabla
+class Aluno
+class AvaliacaoAdapter
+class AvaliacaoConceito implements IAvaliacao
+class AvaliacaoNota implements IAvaliacao
+
+Aluno --> IAvaliacao
+Aluno --> AvaliacaoAdapter
+AvaliacaoAdapter --> AvaliacaoNota
+AvaliacaoAdapter ..> IAvaliacao
+
+@enduml
