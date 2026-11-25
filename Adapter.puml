@@ -1,14 +1,15 @@
 @startuml classDiagram
 title Adapter
-' majoritariamente conversões e blablabla
-class Aluno
-class AvaliacaoAdapter
-class AvaliacaoConceito implements IAvaliacao
-class AvaliacaoNota implements IAvaliacao
+class Termometro
+class TemperaturaAdapter
+class TemperaturaCelsius implements ITemperatura
+class TemperaturaFahrenheit
 
-Aluno --> IAvaliacao
-Aluno --> AvaliacaoAdapter
-AvaliacaoAdapter --> AvaliacaoNota
-AvaliacaoAdapter ..> IAvaliacao
+interface ITemperatura
+
+Termometro --> ITemperatura
+Termometro --> TemperaturaAdapter
+TemperaturaAdapter --> TemperaturaFahrenheit
+TemperaturaAdapter ..> ITemperatura
 
 @enduml
